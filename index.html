@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Search</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="Stylesheets/style.css">
+</head>
+<body>
+    <nav>
+        <div id="nav_contents" class="limit_width">
+            <img src="Images/logo_inverted.png">
+        </div>
+    </nav>
+    <div id="nav_holder">
+        <!--Holder for nav space-->
+    </div>
+    <div id="page_container" class="limit_width">
+        <div id="page_header">
+            <h1>Search for a patient:</h1>
+        </div>
+        <div id="search_container">
+            <form id="search_form">
+                <div id="nhs_field" class="form_field">
+                    <label for="nhs_no" class="form_label">NHS Number:</label>
+                    <input type="number" id="nhs_no" class="form_input" name="nhs_no" value="" placeholder="Enter 10-digit NHS number">
+                </div>
+                <div id="surname_field" class="form_field">
+                    <label for="surname" class="form_label">Last Name:</label>
+                    <input type="text" id="surname" class="form_input" name="surname" value="" placeholder="Enter patient surname">
+                </div>
+                <div id="name_field" class="form_field">
+                    <label for="name" class="form_label">First name:</label>
+                    <input type="text" id="name" class="form_input" name="name" value="" placeholder="Enter patient first name" required>
+                </div>
+                <div id="dob_field" class="form_field">
+                    <label for="dob" class="form_label">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" class="form_input" min="1901-01-01">
+                </div>
+                <div id="form_buttons">
+                    <div id="submit_button" class="page_button">
+                        <input type="button" class="button_input" value="Submit" onclick="formSubmit()">
+                    </div>
+                    <div id="reset_button" class="page_button">
+                        <input type="reset" class="button_input" onclick="clearInput()">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="result_container">
+            <div id="result_heading">
+                <h2>Search Results</h2>
+            </div>
+            <div id="result_holder">
+
+                <div id="result_search">
+                    <p>Searching...</p>
+                </div>
+
+                <div id="result_none">
+                    <p>No results found. Please try again with different search terms.</p>
+                </div>
+
+                <div id="result_list">
+                    <!--Script to insert further divs with results-->
+                </div>
+            </div>
+        </div>
+
+        <div id="record_container">
+            <div id="record_header">
+                <div id="record_name" class="record_top">
+                    <h2><!--Script to insert--></h2>
+                </div>
+                <div id="record_nhs" class="record_top">
+                    <h2><!--Script to insert--></h2>
+                </div>
+            </div>
+            <div id="record_content">
+                <div id="column_1" class="record_column">
+                    <!--Script to insert-->
+                </div>
+                <div id="column_2" class="record_column">
+                    <!--Script to insert-->
+                </div>
+            </div>
+        </div>
+        <div id="reset_all_container">
+            <div id="reset_all_button">
+                <input type="button" value="Reset All" onclick="clearInput()">
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+<script src="Scripts/script.js"></script>
+</html>

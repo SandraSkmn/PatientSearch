@@ -1,0 +1,282 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(240, 244, 245, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.limit_width {
+    width: 90vw;
+    max-width: 1100px;
+}
+
+
+/*Nav styling*/
+
+nav {
+    background-color: rgb(28,30,33);
+    height: 15vh;
+    border-bottom: solid 3vh white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    position: fixed;
+}
+
+#nav_contents img {
+    height: 10vh;
+}
+
+#nav_holder {
+    margin-top: 15vh;
+}
+
+
+
+/*Main container styling*/
+
+#page_container {
+    margin-top: 8vh;
+    margin-bottom: 8vh;
+}
+
+#page_header {
+    font-size: 2.4vh;
+    margin-bottom: 8vh;
+}
+
+#search_container {
+    background-color: rgb(53, 55, 61);
+    border-radius: 15px;
+}
+
+/*Form styling*/
+
+form {
+    padding: 3%;
+}
+
+.form_field {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1vh;
+}
+
+.form_label {
+    color: white;
+    font-size: 2vh;
+    width: 25%;
+    padding: 1vh;
+}
+
+.form_input {
+    width: 75%;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    border-radius: 5vh;
+    color: rgb(53, 55, 61);
+    font-size: 1.6vh;
+}
+
+.form_input::placeholder {
+    color: rgb(53, 55, 61);
+}
+
+.form_input:focus::placeholder {
+    color: transparent;
+}
+
+#dob_field {
+    margin-bottom: 3vh;
+}
+
+/*Form button styling*/
+
+#form_buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.page_button {
+    margin-left: 1vw;
+    margin-right: 1vw;
+    background-color: rgb(32, 188, 165);
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page_button:hover {
+    background-color:rgb(13, 109, 95);
+}
+
+.button_input {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2vh;
+    width: 100%;
+    height: 100%;
+    padding: 1vw;
+}
+
+
+/*Search results section styling - hidden by default*/
+
+#result_container {
+    margin-top: 8vh;
+    margin-bottom: 8vh;
+    display: none;
+    /*display none at default*/
+}
+
+#result_heading {
+    font-size: 2.2vh;
+    margin-bottom: 3vh;
+}
+
+
+#result_holder {
+    height: 20vh;
+    background-color: white;
+    box-shadow: inset 0 0 10px 1px rgb(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    overflow-y: scroll;
+}
+
+#result_search {
+    font-size: 2vh;
+    /*display none once results loaded*/
+}
+
+#result_none {
+    font-size: 2vh;
+    text-align: center;
+    display: none;
+    /*Display if no results found*/
+}
+
+#result_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    display: none;
+    /*display none before results loaded - change to flex!*/
+}
+
+#result_fields {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-bottom: 1vh;
+    border-bottom: solid 2px rgb(53, 55, 61);
+}
+
+.field {
+    width: 25%;
+}
+
+.single_result {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+
+}
+
+.single_result:hover {
+    background-color:rgb(200, 241, 235);
+}
+
+/*Patient record box section*/
+
+#record_container {
+    height: 40vh;
+    background-color:rgb(13, 109, 95);
+    border-radius: 15px;
+    padding: 3vh;
+    margin-bottom: 8vh;
+    display:none;
+    /*display none until result selected*/
+}
+
+#record_header {
+    display: flex;
+    justify-content: space-between;
+    height: 6vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+}
+
+.record_top {
+    width: 50%;
+    font-size: 1.6vh;
+    color: white;
+}
+
+#record_content {
+    background-color: white;
+    height: 28vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 2vh;
+    font-size: 1.8vh;
+}
+
+.record_column {
+    width: 50%;
+}
+
+
+
+/*Reset all button*/
+
+#reset_all_container {
+    display: none;
+    width: 100%;
+    justify-content: center;
+    /*display none until record container showing - change to flex!*/
+}
+
+#reset_all_button {
+    width: 20vw;
+    background-color: rgb(32, 188, 165);
+    padding: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#reset_all_button input[type="button"] {
+    background: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 2vh;
+}
+
+#reset_all_button:hover {
+    background-color:rgb(13, 109, 95);
+}
+
+
+
+
+
