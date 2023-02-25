@@ -1,3 +1,3 @@
 # PatientSearch
 
-Uses JS fetch to retrieve patient details from specified identifiers
+Uses JS fetch to retrieve patient details from database with specified identifiers
